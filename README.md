@@ -14,7 +14,7 @@
 ## Project Set Up
 
 ### Lab 1.1 - Forking Existing Projects
-Once you have access to the Domino training environment - Guide your mouse to the left blue menu and click the **Search** page. Afterwards, type the word 'Training' in the cell provided and click enter to discover any projects tagged under 'Training'. (The left blue menu shrinks to show only the icon of the pages. Unshrink the left blue menu by guiding your mouse over the icon pages.)
+Once you have access to the Domino training environment - Guide your mouse to the top *Search* menu. Afterwards, type the word 'Training' in the cell provided and click enter to discover any projects tagged under 'Training'. 
 
 <!-- ![image](readme_images/SearchIndex.png) -->
 
