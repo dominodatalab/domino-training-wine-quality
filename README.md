@@ -16,7 +16,7 @@
 ### Lab 1.1 - Forking Existing Projects
 Once you have access to the Domino training environment - Guide your mouse to the top *Search* menu. Afterwards, type the word 'Training' in the cell provided and click enter to discover any projects tagged under 'Training'. 
 
-<!-- ![image](readme_images/SearchIndex.png) -->
+<!-- ![image](readme_images/NewUISearch.png) -->
 
 <p align="center">
 <img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/SearchIndex.png width="800">
