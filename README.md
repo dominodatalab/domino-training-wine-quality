@@ -14,66 +14,40 @@
 ## Project Set Up
 
 ### Lab 1.1 - Forking Existing Projects
-Once you have access to the Domino training environment - Guide your mouse to the top *Search* menu. Afterwards, type the word 'Training' in the cell provided and click enter to discover any projects tagged under 'Training'. 
+Once you have access to the Domino training environment, Guide your mouse to the top Search menu. In the cell provided, begin typing *WineQualityProject*. You'll see any relevant projects, data sources, environments, etc., appear in the drop-down menu.
 
 <!-- ![image](readme_images/NewUISearch.png) -->
 
-<p align="center">
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/03934da81f89ef439fd5fd0eec35222fe30535da/readme_images/NewUISearch.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/03934da81f89ef439fd5fd0eec35222fe30535da/readme_images/NewUISearch.png>
 
-Select the project called WineQuality
-
-<!-- ![image](readme_images/Search.png) -->
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Search.png width="800">
-</p>
+Select the project called WineQualityProject.
 
 Read the readme to learn more about the project's use case, status, etc.
 
-In the top right corner, choose the icon to **fork** the project. Name the project *Domino-Training-yourname*
+In the top right corner, choose the icon to **fork** the project. Name the project *Domino-Training-YourName*
 
 <!-- ![image](readme_images/Fork.png) -->
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Fork.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/f99b0d633ee72548ad0dc5727bf051db8c673bb6/readme_images/SearchIndex.png>
 
-In your new project - go into the settings tab
+**You've just created your first project!**
 
-View the default hardware tier and compute environment - ensure they are set to 'Small' and 'Domino Analytics Workshop Environment' respectively:
+### Lab 1.2 - Update Project Settings
+In your new project, click on Settings in the bottom left. This will take you to your project settings.
 
-<!-- ![image](readme_images/ProjectSettings.png) -->
+View the default hardware tier and compute environment - ensure they are set to *Small* and *WineQualityProject* respectively:
 
-<p align="center">
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/fe242949bc59dc93903b9cc0ce454cd8e8382d21/readme_images/NewUIProjectSettings.png width="800">
 
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ProjectSettings.png width="800">
-</p>
-
-Go to the Access and Sharing tab - change your project visibility to **Public**
-
-<!-- ![image](readme_images/ProjectVisibility.png) -->
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ProjectVisbility.png width="800">
-</p>
+Go to the Access and Sharing tab - change your project visibility to **Private**. 
 
 Add your instructor or another attendee as a collaborator in your project. 
-<!-- ![image](readme_images/AddCollaborator.png) -->
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/AddCollaborator.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/4bd62c45bbcdd5d65af23608afef7ecb893620a8/readme_images/NewUIAccessSharing.png width="800">
 
-Change their permissions to Results Consumer.
-<!-- ![image](readme_images/ResultsConsumer.png) -->
+**You've updated your project settings and added collaborators!**
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ResultsConsumer.png width="800">
-</p>
-
-### Lab 1.2 - Defining Project Goals
+### Lab 1.3 - Defining Project Goals
 
 Click back into the Overview area of your project. Then navigate to the Manage tab.
 
@@ -110,7 +84,7 @@ For the goal title type in 'Explore Data' and click save. Once the goal is saved
 <img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Goal1comment.png width="800">
 </p>
 
-### Lab 1.3 - Add Data Source
+### Lab 1.4 - Add Data Source
 
 We will now add a data connection defined by the admin of our project to later query in data. To do so - navigate to the Data tab of your projects. If you're taken to the Domino Datasets view, please click on the Data Sources view instead and click on 'Add a Data Source'
 
