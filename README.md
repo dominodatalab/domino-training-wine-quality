@@ -19,7 +19,7 @@ Once you have access to the Domino training environment - Guide your mouse to th
 <!-- ![image](readme_images/NewUISearch.png) -->
 
 <p align="center">
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/tree/474b215e43c411eb9cd4586d445aa3a7fc499c3c/readme_images/NewUISearch.png width="800">
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/03934da81f89ef439fd5fd0eec35222fe30535da/readme_images/NewUISearch.png width="800">
 </p>
 
 Select the project called WineQuality
