@@ -169,33 +169,25 @@ Rename your notebook 'EDA_code.ipynb' by right-clicking on the file name as show
 
 ### Lab 2.4 - Syncing Files
 
-Now that we've finished working on our notebook and written data back to our project, we want to sync our latest work. To do so click on the File Changes tab in the top left corner of your screen - 
+Now that we've finished working on our notebook and written data back to our project, we want to sync our latest work. 
+
+Click on the File Changes tab in the top left corner of your screen - 
 
 <img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/c2f51a053bb0c9f94f7b36ee686dd1a1242690e5/readme_images/SyncNB.png>
 
 Enter an informative but brief commit message such as "Sync EDA notebook to project" and click *Sync All Changes*. 
 
-Click the Domino logo on the upper left corner of the blue menu. Then select **Code** on the left blue menu as shown below.   
+In your Project, navigate to *Code*. You'll see that the latest commit will reflect the commit message you just logged, and you can see 'EDA_code.ipynb' in your file directory.
 
-Notice that the latest commit will reflect the commit message you just logged and you can see 'EDA_code.ipynb' in your file directory.
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/f0475f708e0a1a21c46b38d3198df8f6674f3885/readme_images/ViewCode.png> 
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/DFS.png width="800">
-</p>
+Click on your notebook to view it. Click *Link to Task* in the top left and choose the *Explore Data* task we created in Lab 1.3.
 
-Click on your notebook to view it. On the top of your screen and click 'Link to Goal' in the dropdown, after selecting the goal you created in Lab 1.2
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/f0475f708e0a1a21c46b38d3198df8f6674f3885/readme_images/LinkTask.png>
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/LinkToGoal.png width="800">
-</p>
+Navigate back to the *Tasks* page, and select *Explore Data*. You'll see our linked notebook. Click on the circled checkmark to mark this complete. 
 
-Now navigate to Overview, then to the manage tab and see your linked notebook.
-
-Click the ellipses on the goal to mark the goal as complete
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/MarkGoalComplete.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/f0475f708e0a1a21c46b38d3198df8f6674f3885/readme_images/Task.png> 
 
 
 ### Lab 2.5 - Run and Track Experiments
