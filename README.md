@@ -268,24 +268,20 @@ Here we can see a lot more detail about the different runs. Scroll down to see t
 
 <img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/bb2a3e3be44a0eb6270686653e9ee7e1179a277e/readme_images/compareruns.png> 
 
-**You've successfully compared experiments in Domino!**
+**You've successfully compared experiments and selected a model in Domino!**
 
 # Section 3 
-## Deploy Model
+## Deploy Models to Production
 
-### Lab 3.1 Deploying Model API Endpoint
+### Lab 3.1 Deploying Domino Endpoints
 
 Now that you have completed model training and selection - it's time to get your model deployed.
 
 In the last lab - we trained a sklearn model and saved it to a serialized (pickle) file. To deploy this trained model - we'll use a script to load in the saved model object and pass new records for scoring. 
 
-To do so - navigate to the **Model APIs** tab in your project. Click **New Model**.
+To do so - navigate to *Deployments > Endpoints* in your project. Click *Create Domino endpoint*.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ModelAPIBuilding.png width="800">
-</p>
-
-Name your model 'wine-model-yourname'
+Name your model *wine-model-yourname*.
     
 For the description add the following 
     
@@ -305,55 +301,67 @@ Sample Scoring Request:
 }
 ```
 
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/b704a3ad17483eb20341f2800a284408584ec9d2/readme_images/NewEndpoint.png>
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/NewModelAPIConfig1.png width="800">
-</p>    
+Click *Next*. In the field *The file containing the code to invoke (must be a Python or R file)* enter the following:
 
-Click **Next**. On the next page - 
-
-For **The file containing the code to invoke (must be a Python or R file)** enter
-
-`scripts/predict.py`
+```
+scripts/predict.py
+```
     
-For **The function to invoke** enter
+In the field *The function to invoke* enter the following:
     
-`predict`
+```
+predict
+```
 
-Check that the **Choose an Environment** has the following selected:
-`Domino Analytics Workshop Environment`
+Confirm that the *Choose an Environment* has the *WineQualityProject* selected.
 
-Be sure to check the box *Log HTTP requests and responses to model instance logs*
+Check the box *Log HTTP requests and responses to model instance logs*.
     
-And click **Create Model**
+Click *Create Endpoint*.
     
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/NewModelAPIConfig.png width="800">
-</p>        
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/b704a3ad17483eb20341f2800a284408584ec9d2/readme_images/EndpointSetup.png>     
   
-Over the next 2-5 minutes, you'll see the status of your model go from Preparing to Build -> Building -> Starting -> Running
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ModelAPIBuilding.png width="800">
-</p>        
-    
-    
-Once your model reaches the Running state - a pod containing your model object and code for inference is up and ready to accept REST API calls.
+Over the next 2-5 minutes, you'll see the status of your endpoint go from Preparing to Build -> Building -> Starting -> Running   
 
-To test your model navigate to the Overview tab. In the request field in the Tester tab enter a scoring request in JSON form. You can copy the sample request that you defined in your description field.
+### Lab 3.2 - Test your Endpoint
     
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ScoringRequest.png width="800">
-</p>        
+Once your endpoint reaches the Running state, a pod containing your object and code for inference is up and ready to accept REST API calls.
+
+To test your endpoint, navigate to the Overview tab. In the request field in the Tester tab enter a scoring request in JSON form. You can copy the sample request that you defined in your description field.
+
+``` 
+{
+  "data": {
+    "density":0.99,
+    "volatile_acidity": 0.028,
+    "chlorides": 0.05 ,
+    "is_red":0,
+    "alcohol": 11
+  }
+}
+```
     
-In the response box you will see a **prediction** value representing your model's predicted quality for a bottle of wine with the attributes defined in the Request box. Try changing 'is_red' from 0 to 1 and 'alcohol' from 11 to 5 to see how the predicted quality differs. Feel free to play around with different values in the Request box.
+In the response box you will see a *prediction* value representing your endpoint's predicted quality for a bottle of wine with the attributes defined in the Request box. Try changing 'is_red' from 0 to 1 and 'alcohol' from 11 to 5 to see how the predicted quality differs. Feel free to play around with different values in the Request box.
 
-After you have sent a few scoring requests to the model endpoint, check out the instance logs by clicking the Instance Logs button. Here you can see that all scoring requests to the model complete with model inputs, responses, response times, errors, warnings etc. are being logged. Close the browser tab that you were viewing the instance logs in. 
+``` 
+{
+  "data": {
+    "density":0.99,
+    "volatile_acidity": 0.028,
+    "chlorides": 0.05 ,
+    "is_red":1,
+    "alcohol": 5
+  }
+}
+```
 
-Now, back on your model's overview page - note that there are several tabs next to the **Tester** tab that provide code snippets to score our model from a web app, command line, or other external source.
+Note that there are several tabs next to the *Tester* tab that provide code snippets to score our endpoint from a web app, command line, or other external source.
 
 In the next lab we will deploy an R shiny app that exposes a front end for collecting model input, passing that input to the model, then parsing the model's response to a dashboard for consumption.
 
-### Lab 3.2 Deploying Web App
+### Lab 3.3 Deploying Web App
     
 Now that we have a pod running to serve new model requests - we will build out a front end to make calling our model easier for end-users.
     
