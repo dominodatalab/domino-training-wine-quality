@@ -561,6 +561,7 @@ Once you're in the app you can try out sending different scoring requests to you
 **You've Now Created a Shiny App!**
 
 ### Lab 3.4 - Share Web App 
+***Documentation: [App Security and Identity](https://docs.dominodatalab.com/en/latest/user_guide/cb9195/app-security-and-identity/)***
 
 Congratulations! You have now gone through a full workflow to pull data from an S3 bucket, clean and visualize the data, train several models across different frameworks, deploy the best performing model, and use a web app front end for easy scoring of your model. Now the final step is to get your model and front end into the hands of the end users.
 
