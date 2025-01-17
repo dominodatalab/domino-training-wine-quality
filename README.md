@@ -1,45 +1,45 @@
-## Domino Hands-On Workshop: Predicting Wine Quality
+## Domino User Training Workshop: Predicting Wine Quality
 
 #### In this workshop you will work through an end-to-end workflow broken into various labs to -
 
 * Read in data from a live source
 * Prepare your data in an IDE of your choice, with an option to leverage distributed computing clusters
 * Train several models in various frameworks
-* Compare model performance across different frameworks and select best performing model
+* Compare model performance across different frameworks and select the best performing model
 * Deploy model to a containerized endpoint and web-app frontend for consumption
 * Leverage collaboration and documentation capabilities throughout to make all work reproducible and sharable!
 
 
 # Section 1
-## Project Set Up
+## Set up a Domino Project
 
 ### Lab 1.1 - Forking Existing Projects
-Once you have access to the Domino training environment, Guide your mouse to the top Search menu. In the cell provided, begin typing *WineQualityProject*. You'll see any relevant projects, data sources, environments, etc., appear in the drop-down menu.
+***Documentation: [Fork Projects](https://docs.dominodatalab.com/en/latest/user_guide/ef261b/fork-projects/)***
 
-<!-- ![image](readme_images/NewUISearch.png) -->
+Once you have access to the Domino training environment, guide your mouse to the top Search menu. In the cell provided, begin typing *WineQualityProject*. You'll see any relevant projects, data sources, environments, etc., appear in the drop-down menu.
 
 <img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/03934da81f89ef439fd5fd0eec35222fe30535da/readme_images/NewUISearch.png>
 
-Select the project called WineQualityProject.
+Select the project called *WineQualityProject*.
 
 Read the readme to learn more about the project's use case, status, etc.
 
-In the top right corner, choose the icon to **fork** the project. Name the project *Domino-Training-YourName*
-
-<!-- ![image](readme_images/Fork.png) -->
+In the top right corner, choose the icon to *fork* the project. Name the project *Domino-Training-YourName*
 
 <img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/f99b0d633ee72548ad0dc5727bf051db8c673bb6/readme_images/SearchIndex.png>
 
 **You've just created your first project!**
 
 ### Lab 1.2 - Update Project Settings
+***Documentation: [Project Settings](https://docs.dominodatalab.com/en/latest/user_guide/dba65c/set-project-settings/)***
+
 In your new project, click on Settings in the bottom left. This will take you to your project settings.
 
 View the default hardware tier and compute environment - ensure they are set to *Small* and *WineQualityProject* respectively:
 
 <img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/fe242949bc59dc93903b9cc0ce454cd8e8382d21/readme_images/NewUIProjectSettings.png width="800">
 
-Go to the Access and Sharing tab - change your project visibility to **Private**. 
+Go to the Access and Sharing tab - change your project visibility to *Private*. 
 
 Add your instructor or another attendee as a collaborator in your project. 
 
@@ -47,155 +47,69 @@ Add your instructor or another attendee as a collaborator in your project.
 
 **You've updated your project settings and added collaborators!**
 
-### Lab 1.3 - Defining Project Goals
+### Lab 1.3 - Defining Project Tasks
+***Documentation: [Add Project tasks](https://docs.dominodatalab.com/en/latest/user_guide/4e60ef/add-project-tasks/)***
 
-Click back into the Overview area of your project. Then navigate to the Manage tab.
+[//]: # In the left pane of your Project, navigate to *Govern* > *Tasks*. 
 
-<!-- ![image](readme_images/Overview.png) -->
+In the left pane of your Project, navigate to *Overview* > *Tasks*. Depending on your version of Domino, you may also find this by navigating to *Govern* > *Tasks*. 
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Overview.png width="800">
-</p>
+In the top right of the Tasks window, click *Add Task*.
 
-Click on Add Goals
+Enter *Explore Data* for the task name. Update the stage to *Data Acquisition and Exploration*. Assign yourself or one of your project collaborators as an owner of the task. Click *Save*. 
 
-<!-- ![image](readme_images/AddProjectGoals.png) -->
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/db2227e91e02b5140e9e1f223c29f7ccc8a7094f/readme_images/ProjectTask.png width="800">
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/AddProjectGoals.png width="800">
-</p>
-
-For the goal title type in 'Explore Data' and click save. Once the goal is saved click the drop down on the right to mark the goal status as 'Data Acquisition and Exploration'.
-
-
-<!-- ![image](readme_images/Goal1status.png) -->
-
-<p align="center">
-
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Goal1status.png width="800">
-</p>
-
-[optional] - Add a comment to the goal and tag a collaborator you've added earlier by typing @ then their username. Please click on the paper airplane to submit the comment.
-
-<!-- ![image](readme_images/Goal1comment.png) -->
-
-<p align="center">
-
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Goal1comment.png width="800">
-</p>
-
-### Lab 1.4 - Add Data Source
-
-We will now add a data connection defined by the admin of our project to later query in data. To do so - navigate to the Data tab of your projects. If you're taken to the Domino Datasets view, please click on the Data Sources view instead and click on 'Add a Data Source'
-
-Select the 'domino-winequality-workshop' s3 bucket connection and click add to project
-
-<!-- ![image](readme_images/AddDataSource.png) -->
-
-<p align="center">
-
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/AddDataSource.png width="800">
-</p>
-
-Select the 'domino-winequality-workshop' s3 bucket connection and click add to project
-
-<!-- ![image](readme_images/AddS3.png) -->
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/AddS3.png width="800">
-</p>
-
-The data source should look like the image below
-
-<!-- ![image](readme_images/S3done.png) -->
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/S3done.png width="800">
-</p>
-
-This concludes all labs in section 1 - Prepare Project and Data! 
+**You've added a project task!**
 
 # Section 2 
-## Develop Model
+## Execute Code
 
-### Lab 2.1 - Inspect Compute Environment
-From the left blue menu click on the cube icon page called 'Environments'.
+### Lab 2.1 - Add a Data Source
+***Documentation: [Add a Data Source to a Project](https://docs.dominodatalab.com/en/latest/user_guide/fa5f3a/use-data-sources/#add_an_existing_data_source_to_a_project)***
 
-<!-- ![image](readme_images/ShowEnv.png) -->
+We will now add a data connection defined by the admin of our project to later query in data. Navigate to *Data > Data Sources* in the left pane of your project. Click _Add a Data Source_.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ShowEnv.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/2134037f271320638b3a0283b973f537f5c6f115/readme_images/AddDataSourcce.png> 
 
-Select 'Domino Analytics Workshop Environment' 
+Search for *WineQualityWorkshop*. You will see an Amazon S3 data store was created by your admin. Select the data source and choose *Add to Project*.  
 
-<!-- ![image](readme_images/EnvironmentsPage.png) -->
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/2134037f271320638b3a0283b973f537f5c6f115/readme_images/AddS3toProject.png>
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/EnvironmentsPage.png width="800">
-</p>
+**You've now added data to your Project!**
 
-Inspect the dockerfile to understand the packages installed, configurations specified, and kernels installed etc. 
+### Lab 2.2 - Launch a Workspace
+***Documentation: [Launch a Workspace](https://docs.dominodatalab.com/en/latest/user_guide/e6e601/launch-a-workspace/)***
 
-Scroll down to Pluggable Workspaces Tools - this is the area in the compute environment where IDEs are made available for end users
+In your Project, click into the *Workspaces* tab on the left. In the top right of the *Workspaces* page, click *Create New Workspace*.
 
-Scroll down to the Run Setup Scripts section
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/9afe8c58d5e94a83259b0a55096b517cd90e26ab/readme_images/CreateWorkspace.png>
 
-Here we have a script that executes upon startup of workspace sessions or job (pre-run script) and a script that executes upon termination of a workspace session or job (post-run script) 
+A *Launch New Workspace* window appears. You'll see that the Workspace Environment already defaults to *WineQualityProject* because of the Project Settings you set in step 1.2. You always have the option to manually change the Environment for an individual workspace, which you can do here. Let's leave it as is for now.
 
-Finally navigate to the Projects tab - you should see all projects that are leveraging this compute environment.
+Select *JupyterLab* as the *Workspace IDE*.
 
-<!-- ![image](readme_images/SaidEnvs.png) -->
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/9afe8c58d5e94a83259b0a55096b517cd90e26ab/readme_images/Workspace.png>
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/SaidEnvs.png width="800">
-</p>
+Next, navigate to *Data Plane & Hardware*. Again, you'll see Small is the default Hardware tier because of what we set in our Project Settings. We'll keep it as Small for this Workspace. 
 
-Click into the **Projects** tab and click on your project name to prepare for the next lab.
+Click *Launch* now.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/trainingProj.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/9afe8c58d5e94a83259b0a55096b517cd90e26ab/readme_images/WorkspaceHWT.png>
 
-### Lab 2.2 - Exploring Workspaces
+**You've now launched your first Workspace!**
 
-Click into the **Workspaces** tab on the left, then in the top right corner click **Create New Workspace**
+### Lab 2.3 - Execute Code
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/AddWorkspace.png width="800">
-</p>
+In your Workspace, create a new Python notebook by clicking the *Python* icon under *Notebook*.
 
-Type a name for the Workspace in the 'Workspace Name' cell and next click through the available Compute Environments in the Workspace Environment drop down button. Next, ensure that Domino-Workspace-Environment is selected.
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/c2f51a053bb0c9f94f7b36ee686dd1a1242690e5/readme_images/pythonNB.png>
 
-Select JupyterLab as the Workspace IDE
+In the left pane, click on the *Data* icon > *Data Sources* to find the Data Source added earlier. Copy the Python code snippet into the first line of your notebook and run the cell.
 
-Click the Hardware Tier dropdown to browse all available hardware configurations - ensure that Small is selected. 
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/c2f51a053bb0c9f94f7b36ee686dd1a1242690e5/readme_images/pythonData.png>
 
-Click Launch now.
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/LaunchWorkspace.png width="800">
-</p>
-
-Once the workspace is launched, create a new python notebook by clicking here:
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/NewNotebook.png width="800">
-</p>
-
-Once your notebook is loaded, click on the left blue menu and click on the Data page, then onto the data source we added in lab 1 as displayed below
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/DataTab.png width="800">
-</p>
-
-Copy the provided code snippet into your notebook and run the cell
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/S3CodeSnippet.png width="800">
-</p>
-
-After running the code snippet. Copy the code below into the following cell 
+After running the code snippet. Copy the code below into the following cell: 
 
 ```python
 from io import StringIO
@@ -208,7 +122,7 @@ df=pd.read_csv(data)
 df.head()
 ```
 
-Now cell by cell, copy the code snippets below and run the cells to visualize and prepare the data! (You can click on the '+' icon to add a blank cell after the current cell)
+Now, cell by cell, copy the code snippets below and run the cells to visualize and prepare the data! (You can click on the '+' icon to add a blank cell after the current cell):
 
 ```python
 import seaborn as sns
@@ -235,7 +149,7 @@ for i in list(important_feats.keys())+['quality']:
     sns.histplot(df[i], kde=True)
 ```
 
-Finally write your data to a Domino Dataset by running
+Finally write your data to a Domino Dataset by running the following:
 
 ```python
 import os
@@ -243,29 +157,23 @@ path = str('/domino/datasets/local/{}/WineQualityData.csv'.format(os.environ.get
 df.to_csv(path, index = False)
 ```
 
-Your notebook should be populated like the display below.
+Run all cells. Your notebook should be populated like the display below:
 
-<!-- ![image](readme_images/EDAView.png) -->
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/c2f51a053bb0c9f94f7b36ee686dd1a1242690e5/readme_images/Histogram.png>
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/EDAView.png width="800">
-</p>
+Rename your notebook 'EDA_code.ipynb' by right-clicking on the file name as shown below. Click the Save icon.
 
-Rename your notebook 'EDA_code.ipynb' by right clicking on the file name as shown below then click the Save icon.
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/c2f51a053bb0c9f94f7b36ee686dd1a1242690e5/readme_images/Rename.png>
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/RenameAndSaveNotebook.png width="800">
-</p>
+**You've successfully executed some code!**
 
-### Lab 2.3 - Syncing Files
+### Lab 2.4 - Syncing Files
 
 Now that we've finished working on our notebook and written data back to our project, we want to sync our latest work. To do so click on the File Changes tab in the top left corner of your screen - 
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/SyncProject.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/c2f51a053bb0c9f94f7b36ee686dd1a1242690e5/readme_images/SyncNB.png>
 
-Enter an informative but brief commit message such as "Completed EDA notebook" and click to Sync All Changes. 
+Enter an informative but brief commit message such as "Sync EDA notebook to project" and click *Sync All Changes*. 
 
 Click the Domino logo on the upper left corner of the blue menu. Then select **Code** on the left blue menu as shown below.   
 
@@ -290,7 +198,7 @@ Click the ellipses on the goal to mark the goal as complete
 </p>
 
 
-### Lab 2.4 - Run and Track Experiments
+### Lab 2.5 - Run and Track Experiments
 
 Now it's time to train our models! 
 
