@@ -168,6 +168,7 @@ Rename your notebook 'EDA_code.ipynb' by right-clicking on the file name as show
 **You've successfully executed some code!**
 
 ### Lab 2.4 - Syncing Files
+***Documentation: [Sync changes in a Workspace](https://docs.dominodatalab.com/en/latest/user_guide/262fef/sync-changes-in-a-workspace/)***
 
 Now that we've finished working on our notebook and written data back to our project, we want to sync our latest work. 
 
@@ -176,6 +177,15 @@ Click on the File Changes tab in the top left corner of your screen -
 <img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/c2f51a053bb0c9f94f7b36ee686dd1a1242690e5/readme_images/SyncNB.png>
 
 Enter an informative but brief commit message such as "Sync EDA notebook to project" and click *Sync All Changes*. 
+
+Click *Stop* at the top of your Workspace to stop the instance.
+
+**You've now successfully synced changes!**
+
+### Lab 2.5 - Complete Project Tasks
+***Documentation: [Link files to Tasks](https://docs.dominodatalab.com/en/latest/user_guide/4e60ef/add-project-tasks/#tr3)***
+
+Delete your stopped Workspace by clicking the trashcan icon in the Workspaces page.
 
 In your Project, navigate to *Code*. You'll see that the latest commit will reflect the commit message you just logged, and you can see 'EDA_code.ipynb' in your file directory.
 
@@ -189,60 +199,46 @@ Navigate back to the *Tasks* page, and select *Explore Data*. You'll see our lin
 
 <img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/f0475f708e0a1a21c46b38d3198df8f6674f3885/readme_images/Task.png> 
 
+**You've successfully completed a Project Task!**
 
-### Lab 2.5 - Run and Track Experiments
+### Lab 2.6 - Run Experiments with Domino Jobs
+***Documentation: [Track and monitor experiments](https://docs.dominodatalab.com/en/latest/user_guide/da707d/track-and-monitor-experiments/)***
 
-Now it's time to train our models! 
+Now it's time to train our models by using Domino Jobs! 
 
-We are taking a three pronged approach and building a model in sklearn (python), xgboost (R), and an auto-ml ensemble model (h2o).
+We are taking a three-pronged approach and building a model in sklearn (python), xgboost (R), and an auto-ml ensemble model (h2o).
 
-First, navigate back to your JupyterLab workspace tab. In your file browser go into the scripts folder and inspect 'multitrain.py'
+If you'd like to see the details of what we'll run, navigate to *Code*. In your file browser go into the scripts folder and inspect *multitrain.py*. Check out the code in the script and comments describing the purpose of each line of code.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/MultiTrain.png width="800">
-</p>
-
-Check out the code in the script and comments describing the purpose of each line of code.
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/d623410740bfaa40768bc887c2a229969fa6ca78/readme_images/multitrainpy.png> 
 
 You can also check out any of the training scripts that multitrain.py will call.
 
-Now switch into your other browser tab to return to your domino project. Navigate to the Jobs page. Click on **Run**.
+Navigate to *Jobs* in your Project and click *Run*.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Jobspage.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/9e59ab94fb6ab06236873496b49a9f89a0fcf2df/readme_images/RunJob.png>
 
-Type in the following command below in the **File Name** section of the **Start a Job** pop up window. Click on **Start** to run the job.
+Type or paste the following command below in the *File Name or Command* section of the *Start a Job* pop up window. Click on *Start* to run the job.
 
 ```shell
 scripts/multitrain.py
 ```
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Jobsrun.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/9e59ab94fb6ab06236873496b49a9f89a0fcf2df/readme_images/StartJob.png>
 
-Watch as three job runs have appeared, you may see them in starting, running or completed state.
+Watch as three job runs have appeared, you may see them in starting, running, or completed state.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Jobs.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/f4a41cbb7f1da13dc05ba92de1142084bd7f3b59/readme_images/JobStatus.png> 
 
 Click into the sklearn_model_train.py job run.
 
-In the details tab of the job run note that the compute environment and hardware tier are tracked to document not only who ran the experiment and when, but what versions of the code, software, and hardware were executed.
+In the *Details* tab of the Job run, you can see what versions of the code, software, and hardware were executed, along with details about who ran the Job and when. 
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/sklearnRunDetails.png width="800">
-</p>
+Click on the *Results* tab of the job. Scroll down to view the visualizations and other outputs of the job.
 
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/main/readme_images/sklearnresults.png>
 
-Click on the Results tab of the job. Scroll down to view the visualizations and other outputs of the job.
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/sklearnResults.png width="800">
-</p>
-
+### Lab 2.7 - Track Experiments with MLflow
 
 We've now trained 3 models and it is time to select which model we'd like to deploy. Domino experiment management leverages MLflow Tracking to enable easy logging of experiment parameters, metrics, and artifacts. MLflow runs as a service in your Domino cluster, fully integrated within your workspace and jobs, and honoring role-based access control. Existing MLflow experiments work right out of the box with no code changes required!
 
