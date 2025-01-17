@@ -325,6 +325,8 @@ Click *Create Endpoint*.
   
 Over the next 2-5 minutes, you'll see the status of your endpoint go from Preparing to Build -> Building -> Starting -> Running   
 
+**You've now created a Domino Endpoint!**
+
 ### Lab 3.2 - Test your Endpoint
     
 Once your endpoint reaches the Running state, a pod containing your object and code for inference is up and ready to accept REST API calls.
@@ -360,6 +362,8 @@ In the response box you will see a *prediction* value representing your endpoint
 Note that there are several tabs next to the *Tester* tab that provide code snippets to score our endpoint from a web app, command line, or other external source.
 
 In the next lab we will deploy an R shiny app that exposes a front end for collecting model input, passing that input to the model, then parsing the model's response to a dashboard for consumption.
+
+**You've now tested the output of your Domino Endpoint!**
 
 ### Lab 3.3 Deploying Web App
     
@@ -602,10 +606,8 @@ Navigate back to the **settings** tab and click **Copy Link App**
 
 Paste the copied link into a new private/incognito window. Note that you're able to view the app without being logged into Domino.
 
-PS - Domino provides free licenses for business users to login and view models/apps etc.
+PS - Domino provides free licenses for business users to log in and view apps.
 
 ### *** End of Labs *** 
-
-So now that we've got our model into production are we done? No! We want to make sure that any models we deploy stay healthy over time, and if our models do drop in performance, we want to quickly identify and remediate any issues. Stay tuned for a demo of integrated model monitoring to see how a ML Engineer would automate the model monitoring process and make remediation a breeze.
 
 
