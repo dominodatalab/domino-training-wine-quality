@@ -202,7 +202,7 @@ Navigate back to the *Tasks* page, and select *Explore Data*. You'll see our lin
 **You've successfully completed a Project Task!**
 
 ### Lab 2.6 - Run Experiments with Domino Jobs
-***Documentation: [Track and monitor experiments](https://docs.dominodatalab.com/en/latest/user_guide/da707d/track-and-monitor-experiments/)***
+***Documentation: [Run a Job](https://docs.dominodatalab.com/en/latest/user_guide/af97b7/create-and-run-jobs/)***
 
 Now it's time to train our models by using Domino Jobs! 
 
@@ -241,6 +241,7 @@ Click on the *Results* tab of the job. Scroll down to view the visualizations an
 **You've now trained three models!**
 
 ### Lab 2.7 - Track Experiments with MLflow
+***Documentation: [Track and monitor experiments](https://docs.dominodatalab.com/en/latest/user_guide/da707d/track-and-monitor-experiments/)***
 
 We've now trained 3 models and it is time to select which model we'd like to deploy. Domino experiment management leverages MLflow Tracking to enable easy logging of experiment parameters, metrics, and artifacts. MLflow runs as a service in your Domino cluster, fully integrated within your workspace and jobs, and honoring role-based access control. Existing MLflow experiments work right out of the box with no code changes required!
 
@@ -274,6 +275,7 @@ Here we can see a lot more detail about the different runs. Scroll down to see t
 ## Deploy Models to Production
 
 ### Lab 3.1 Deploying Domino Endpoints
+***Documentation: [Deploy Domino endpoints](https://docs.dominodatalab.com/en/latest/user_guide/8dbc91/deploy-domino-endpoints/)***
 
 Now that you have completed model training and selection - it's time to get your model deployed.
 
@@ -328,6 +330,7 @@ Over the next 2-5 minutes, you'll see the status of your endpoint go from Prepar
 **You've now created a Domino Endpoint!**
 
 ### Lab 3.2 - Test your Endpoint
+***Documentation: [Request Predictions](https://docs.dominodatalab.com/en/latest/user_guide/8dbc91/deploy-domino-endpoints/#Request-a-prediction)***
     
 Once your endpoint reaches the Running state, a pod containing your object and code for inference is up and ready to accept REST API calls.
 
@@ -365,17 +368,12 @@ In the next lab we will deploy an R shiny app that exposes a front end for colle
 
 **You've now tested the output of your Domino Endpoint!**
 
-### Lab 3.3 Deploying Web App
+### Lab 3.3 Deploy a Web App
+***Documentation: [Publish Apps](https://docs.dominodatalab.com/en/latest/user_guide/71635d/publish-apps/)***
     
 Now that we have a pod running to serve new model requests - we will build out a front end to make calling our model easier for end-users.
     
-To do so - in a new browser tab first navigate back to your Project and then in the left blue menu of your project click into the **Code** section and click **New File**
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/AddNewFileforAppsh.png width="800">
-</p>     
-
-Next, we will create a file called ```app.sh```. It's a bash script that will start and run the Shiny App server based on the inputs provided.
-Copy the following code snippet in - 
+In your Project, navigate to *Code*. If you have an ```app.sh``` file, open it now and verify it matches the below. If not, click on *New File* and paste the below code into the file. It's a bash script that will start and run the Shiny App server based on the inputs provided. Click *Save*.
 
 ```shell
 #!/usr/bin/env bash
@@ -399,13 +397,8 @@ R -e 'shiny::runApp("./shiny_app.R", port=8888, host="0.0.0.0")'
 ## This is an example of the code you would need in this bash script for a Dash app
 #python app-dash.py
 ```
-Name the file **app.sh** and click **Save**
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/appsh.png width="800">
-</p>         
 
-
-Now navigate back into the **Code** tab. Click add a new file and name it `shiny_app.R` (make sure the file name is exactly that, it is case sensitive) and then paste the following into the file -
+Navigate back into the *Code* tab. Click add a new file and name it `shiny_app.R` (make sure the file name is exactly that, it is case sensitive) and then paste the following into the file:
 
 ```R
 #
@@ -543,70 +536,47 @@ shinyApp(ui = ui, server = server)
 
 **Go to line 63** note that this is missing input for your model api endpoint. In a new tab navigate to your model API you just deployed. Go into overview and select the R tab as shown below. Copy lines 4-7 from the R code snippet. Switch back to your new file tab and paste the new lines in line 64 in your file.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/RcodeSnippet.png width="800">
-</p>                    
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/0f76874dedb3670ef304bfbf655c9d10c6027e6d/readme_images/CopyRCode.png>
+
 Lines 61-79 in your file should look like the following (note the url and authenticate values will be different) 
                    
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ShinyCodePasted.png width="800">
-</p>         
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/0f76874dedb3670ef304bfbf655c9d10c6027e6d/readme_images/EditAppFile.png >        
 
-Click **Save**
+Click *Save*.
                    
-Now that you have your app.sh and shiny_app.R files created. Navigate to the **App** tab in your project
+Now that you have your `app.sh` and `shiny_app.R` files created. Navigate to the *Deployments > App* tab in your project.
 
-Enter a title for your app - 'wine-app-yourname'
+Enter a title for your app - *YourName Wine Quality Prediction*.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/LaunchApp.png width="800">
-</p>       
-
-Click Publish.
+Click *Publish*.
                    
 You'll now see the below screen, once your app is active (should be within ~1-3 minutes) you can click the View App button. 
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ViewApp.png width="800">
-</p>       
-        
-Once you're in the app you can try out sending different scoring requests to your model using the form on the right side of your page. Click **predict** to send a scoring request and view the results in the visualization on the left side.
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/0f76874dedb3670ef304bfbf655c9d10c6027e6d/readme_images/ViewAppButton.png > 
+
+Once you're in the app you can try out sending different scoring requests to your model using the form on the right side of your page. Click *Predict* to send a scoring request and view the results in the visualization on the left side.
                    
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/ShinyScore.png width="800">
-</p>         
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/main/readme_images/AppView.png >     
 
-# Section 4 
-## Collaborate Results
+**You've Now Created a Shiny App!**
 
-### Lab 4.1 - Share Web App and Model API
+### Lab 3.4 - Share Web App 
 
 Congratulations! You have now gone through a full workflow to pull data from an S3 bucket, clean and visualize the data, train several models across different frameworks, deploy the best performing model, and use a web app front end for easy scoring of your model. Now the final step is to get your model and front end into the hands of the end users.
 
-To do so we will navigate back to our project and click on the **App** tab
+In your App, navigate to the *Permissions* tab.   
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/GoToAppPermissions.png width="800">
-</p>         
+In the Permissions tab, update the permissions to allow *Anyone, including anonymous users*.
 
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/0f76874dedb3670ef304bfbf655c9d10c6027e6d/readme_images/PermissionsUpdate.png>   
 
-From the App page navigate to the **Permissions** tab
-
-In the permissions tab update the permissions to allow anyone, including anonymous users
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/UpdateAppPermissions.png width="800">
-</p>         
-
-Navigate back to the **settings** tab and click **Copy Link App**
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/CopyAppLink.png width="800">
-</p>       
+Navigate back to the *Settings* tab and click *Copy App Link*
 
 Paste the copied link into a new private/incognito window. Note that you're able to view the app without being logged into Domino.
 
 PS - Domino provides free licenses for business users to log in and view apps.
+
+***Congratulations! You have now gone through a full workflow to pull data from an S3 bucket, clean and visualize the data, train several models across different frameworks, deploy the best performing model, and use and share a web app front end for easy scoring of your model!***
 
 ### *** End of Labs *** 
 
