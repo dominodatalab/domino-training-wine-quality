@@ -238,54 +238,37 @@ Click on the *Results* tab of the job. Scroll down to view the visualizations an
 
 <img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/main/readme_images/sklearnresults.png>
 
+**You've now trained three models!**
+
 ### Lab 2.7 - Track Experiments with MLflow
 
 We've now trained 3 models and it is time to select which model we'd like to deploy. Domino experiment management leverages MLflow Tracking to enable easy logging of experiment parameters, metrics, and artifacts. MLflow runs as a service in your Domino cluster, fully integrated within your workspace and jobs, and honoring role-based access control. Existing MLflow experiments work right out of the box with no code changes required!
 
 The jobs that we just ran had MLFlow tracking in them to log the R^2 value and Mean Squared Error (MSE).
 
-To view the experiments click on the **Experiments** tab in your project. Here you have one set of experiments that all the jobs were logged against. 
+To view the experiments click on the *Experiments* tab in your project. Here you have one set of experiments that all the jobs were logged against. Click on the experiment name to see more details.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/Experiments.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/7e0e2c95934cf3064cc3aa6e6e13d2e71331c614/readme_images/ExperimentsWindow.png>
 
-**Click on the experiment name to see more details.**
-<!--
-#<p align="center">
-#<img src = readme_images/experimentRuns.png width="800">
-#</p>
--->
 Within the experiment we can see three different runs corresponding to the three different jobs we created. Our code tagged each with the framework that was used to create the model; H2o Automl, sklearn, and R in this case. We are also tracking the R^2 value and Mean Squared Error (MSE). Our visualisation currently shows only the R^2 value. Let's update it to show both R^2 and MSE so we can get a better view of our models.
 
-Click on the three dots and choose **Edit**
+Click on the three dots and choose *Edit*.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/experimentEdit.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/7e0e2c95934cf3064cc3aa6e6e13d2e71331c614/readme_images/MLflowEdit.png>
 
-Now click on **Target (Metrics)** and select **MSE** to add it to our visualisation. Then click **Save**.
+Now click on *Target (Metrics)* and select *MSE* to add it to our visualisation. Then click *Save*.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/experimentEdit.png width="800">
-</p>
+From our results, it looks like the sklearn model is the best candidate to deploy, and our R model is failing. Let's compare the runs in more detail.
 
-From our results it looks like the sklearn model is the best candidate to deploy and our R model is failing. Let's compare the runs in more detail.
+Click on the checkbox next to the runs you'd like to compare, then the _Compare_ button.
 
-Click on the checkbox at the top of the list of runs, then the compare button (blue and white rectangles).
-
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/experimentCompare.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/1997b3c3176109102104da52da966c55d4ecbf69/readme_images/CompareJobRuns.png>
 
 Here we can see a lot more detail about the different runs. Scroll down to see the parameters (we aren't tracking any this time), the metrics, graphics that are created in the experiments and even the Domino execution details. This gives us the ability to track and share all of the experiments we are doing for a particular initative to ensure we get the best results and have documentation on how we got there.
 
-<p align="center">
-<img src = https://github.com/dominopetter/MLOps-Best-Practices/blob/ea35e8fc1d2e718894af8c1da92988fe7f34cd42/readme_images/experimentGraphics.png width="800">
-</p>
+<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/bb2a3e3be44a0eb6270686653e9ee7e1179a277e/readme_images/compareruns.png> 
 
-In the next section of labs we will deploy the model we trained here!
-
+**You've successfully compared experiments in Domino!**
 
 # Section 3 
 ## Deploy Model
