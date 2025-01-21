@@ -18,7 +18,7 @@
 
 Once you have access to the Domino training environment, guide your mouse to the top Search menu. In the cell provided, begin typing *WineQualityProject*. You'll see any relevant projects, data sources, environments, etc., appear in the drop-down menu.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/03934da81f89ef439fd5fd0eec35222fe30535da/readme_images/NewUISearch.png>
+![1-NewUISearch](readme_images/NewUISearch.png)
 
 <!---
 ![1](raw/latest/readme_images/NewUISearch.png)
@@ -30,7 +30,7 @@ Read the readme to learn more about the project's use case, status, etc.
 
 In the top right corner, choose the icon to *fork* the project. Name the project *Domino-Training-YourName*
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/f99b0d633ee72548ad0dc5727bf051db8c673bb6/readme_images/SearchIndex.png>
+![2-SearchIndex](readme_images/SearchIndex.png)
 <!---
 ![2](raw/latest/readme_images/SearchIndex.png)
 -->
@@ -44,7 +44,7 @@ In your new project, click on Settings in the bottom left. This will take you to
 
 View the default hardware tier and compute environment - ensure they are set to *Small* and *WineQualityProject* respectively:
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/fe242949bc59dc93903b9cc0ce454cd8e8382d21/readme_images/NewUIProjectSettings.png width="800">
+![3-NewUIProjectSettings](readme_images/NewUIProjectSettings.png)
 <!---
 ![3](raw/latest/readme_images/NewUIProjectSettings.png)
 -->
@@ -53,7 +53,7 @@ Go to the Access and Sharing tab - change your project visibility to *Private*.
 
 Add your instructor or another attendee as a collaborator in your project. 
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/4bd62c45bbcdd5d65af23608afef7ecb893620a8/readme_images/NewUIAccessSharing.png width="800">
+![4-NewUIAccessSharing](readme_images/NewUIAccessSharing.png)
 <!---
 ![4](raw/latest/readme_images/NewUIAccessSharing.png)
 -->
@@ -71,7 +71,7 @@ In the top right of the Tasks window, click *Add Task*.
 
 Enter *Explore Data* for the task name. Update the stage to *Data Acquisition and Exploration*. Assign yourself or one of your project collaborators as an owner of the task. Click *Save*. 
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/db2227e91e02b5140e9e1f223c29f7ccc8a7094f/readme_images/ProjectTask.png width="800">
+![5-ProjectTask](readme_images/ProjectTask.png)
 <!---
 ![5](raw/latest/readme_images/ProjectTask.png)
 -->
@@ -86,14 +86,14 @@ Enter *Explore Data* for the task name. Update the stage to *Data Acquisition an
 
 We will now add a data connection defined by the admin of our project to later query in data. Navigate to *Data > Data Sources* in the left pane of your project. Click _Add a Data Source_.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/2134037f271320638b3a0283b973f537f5c6f115/readme_images/AddDataSourcce.png> 
+![6-AddDataSourcce](readme_images/AddDataSourcce.png)
 <!---
 ![6](raw/latest/readme_images/AddDataSourcce.png)
 -->
 
 Search for *WineQualityWorkshop*. You will see an Amazon S3 data store was created by your admin. Select the data source and choose *Add to Project*.  
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/2134037f271320638b3a0283b973f537f5c6f115/readme_images/AddS3toProject.png>
+![7-AddS3toProject](readme_images/AddS3toProject.png)
 <!---
 ![7](raw/latest/readme_images/AddS3toProject.png)
 -->
@@ -105,7 +105,7 @@ Search for *WineQualityWorkshop*. You will see an Amazon S3 data store was creat
 
 In your Project, click into the *Workspaces* tab on the left. In the top right of the *Workspaces* page, click *Create New Workspace*.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/9afe8c58d5e94a83259b0a55096b517cd90e26ab/readme_images/CreateWorkspace.png>
+![8-CreateWorkspace](readme_images/CreateWorkspace.png)
 <!---
 ![8](raw/latest/readme_images/CreateWorkspace.png)
 -->
@@ -114,7 +114,7 @@ A *Launch New Workspace* window appears. You'll see that the Workspace Environme
 
 Select *JupyterLab* as the *Workspace IDE*.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/9afe8c58d5e94a83259b0a55096b517cd90e26ab/readme_images/Workspace.png>
+![9-Workspace](readme_images/Workspace.png)
 <!---
 ![9](raw/latest/readme_images/Workspace.png)
 -->
@@ -123,7 +123,7 @@ Next, navigate to *Data Plane & Hardware*. Again, you'll see Small is the defaul
 
 Click *Launch* now.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/9afe8c58d5e94a83259b0a55096b517cd90e26ab/readme_images/WorkspaceHWT.png>
+![10-WorkspaceHWT](readme_images/WorkspaceHWT.png)
 <!---
 ![10](raw/latest/readme_images/WorkspaceHWT.png)
 -->
@@ -134,14 +134,14 @@ Click *Launch* now.
 
 In your Workspace, create a new Python notebook by clicking the *Python* icon under *Notebook*.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/c2f51a053bb0c9f94f7b36ee686dd1a1242690e5/readme_images/pythonNB.png>
+![11-pythonNB](readme_images/pythonNB.png)
 <!---
 ![11](raw/latest/readme_images/pythonNB.png)
 -->
 
 In the left pane, click on the *Data* icon > *Data Sources* to find the Data Source added earlier. Copy the Python code snippet into the first line of your notebook and run the cell.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/c2f51a053bb0c9f94f7b36ee686dd1a1242690e5/readme_images/pythonData.png>
+![12-pythonData](readme_images/pythonData.png)
 <!---
 ![12](raw/latest/readme_images/pythonData.png)
 -->
@@ -196,16 +196,16 @@ df.to_csv(path, index = False)
 
 Run all cells. Your notebook should be populated like the display below:
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/c2f51a053bb0c9f94f7b36ee686dd1a1242690e5/readme_images/Histogram.png>
+![13-pythonData](readme_images/Histogram.png)
 <!---
-![12](raw/latest/readme_images/Histogram.png)
+![13](raw/latest/readme_images/Histogram.png)
 -->
 
 Rename your notebook 'EDA_code.ipynb' by right-clicking on the file name as shown below. Click the Save icon.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/c2f51a053bb0c9f94f7b36ee686dd1a1242690e5/readme_images/Rename.png>
+![14-Rename](readme_images/Rename.png)
 <!---
-![13](raw/latest/readme_images/Rename.png)
+![14](raw/latest/readme_images/Rename.png)
 -->
 
 **You've successfully executed some code!**
@@ -217,9 +217,9 @@ Now that we've finished working on our notebook and written data back to our pro
 
 Click on the File Changes tab in the top left corner of your screen - 
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/c2f51a053bb0c9f94f7b36ee686dd1a1242690e5/readme_images/SyncNB.png>
+![15-SyncNB.png](readme_images/SyncNB.png)
 <!---
-![14](raw/latest/readme_images/SyncNB.png)
+![15](raw/latest/readme_images/SyncNB.png)
 -->
 
 Enter an informative but brief commit message such as "Sync EDA notebook to project" and click *Sync All Changes*. 
@@ -235,23 +235,23 @@ Delete your stopped Workspace by clicking the trashcan icon in the Workspaces pa
 
 In your Project, navigate to *Code*. You'll see that the latest commit will reflect the commit message you just logged, and you can see 'EDA_code.ipynb' in your file directory.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/f0475f708e0a1a21c46b38d3198df8f6674f3885/readme_images/ViewCode.png> 
+![16-ViewCode](readme_images/ViewCode.png)
 <!---
-![15](raw/latest/readme_images/ViewCode.png)
+![16](raw/latest/readme_images/ViewCode.png)
 -->
 
 Click on your notebook to view it. Click *Link to Task* in the top left and choose the *Explore Data* task we created in Lab 1.3.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/f0475f708e0a1a21c46b38d3198df8f6674f3885/readme_images/LinkTask.png>
+![17-LinkTask.png](readme_images/LinkTask.png)
 <!---
-![16](raw/latest/readme_images/LinkTask.png)
+![17](raw/latest/readme_images/LinkTask.png)
 -->
 
 Navigate back to the *Tasks* page, and select *Explore Data*. You'll see our linked notebook. Click on the circled checkmark to mark this complete. 
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/f0475f708e0a1a21c46b38d3198df8f6674f3885/readme_images/Task.png> 
+![18-Task.png](readme_images/Task.png)
 <!---
-![17](raw/latest/readme_images/Task.png)
+![18](raw/latest/readme_images/Task.png)
 -->
 
 **You've successfully completed a Project Task!**
@@ -265,18 +265,18 @@ We are taking a three-pronged approach and building a model in sklearn (python),
 
 If you'd like to see the details of what we'll run, navigate to *Code*. In your file browser go into the scripts folder and inspect *multitrain.py*. Check out the code in the script and comments describing the purpose of each line of code.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/d623410740bfaa40768bc887c2a229969fa6ca78/readme_images/multitrainpy.png> 
+![19-multitrainpy.png](readme_images/multitrainpy.png)
 <!---
-![18](raw/latest/readme_images/multitrainpy.png)
+![19](raw/latest/readme_images/multitrainpy.png)
 -->
 
 You can also check out any of the training scripts that multitrain.py will call.
 
 Navigate to *Jobs* in your Project and click *Run*.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/9e59ab94fb6ab06236873496b49a9f89a0fcf2df/readme_images/RunJob.png>
+![20-RunJob.png](readme_images/RunJob.png)
 <!---
-![19](raw/latest/readme_images/RunJob.png)
+![20](raw/latest/readme_images/RunJob.png)
 -->
 
 Type or paste the following command below in the *File Name or Command* section of the *Start a Job* pop up window. Click on *Start* to run the job.
@@ -285,16 +285,16 @@ Type or paste the following command below in the *File Name or Command* section 
 scripts/multitrain.py
 ```
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/9e59ab94fb6ab06236873496b49a9f89a0fcf2df/readme_images/StartJob.png>
+![21-StartJob.png](readme_images/StartJob.png)
 <!---
-![20](raw/latest/readme_images/StartJob.png)
+![21](raw/latest/readme_images/StartJob.png)
 -->
 
 Watch as three job runs have appeared, you may see them in starting, running, or completed state.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/f4a41cbb7f1da13dc05ba92de1142084bd7f3b59/readme_images/JobStatus.png> 
+![22-JobStatus.png](readme_images/JobStatus.png)
 <!---
-![21](raw/latest/readme_images/JobStatus.png)
+![22](raw/latest/readme_images/JobStatus.png)
 -->
 
 Click into the sklearn_model_train.py job run.
@@ -303,9 +303,9 @@ In the *Details* tab of the Job run, you can see what versions of the code, soft
 
 Click on the *Results* tab of the job. Scroll down to view the visualizations and other outputs of the job.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/main/readme_images/sklearnresults.png>
+![23-sklearnresults.png](readme_images/sklearnresults.png)
 <!---
-![22](raw/latest/readme_images/sklearnresults.png)
+![23](raw/latest/readme_images/sklearnresults.png)
 -->
 
 **You've now trained three models!**
@@ -319,18 +319,18 @@ The jobs that we just ran had MLFlow tracking in them to log the R^2 value and M
 
 To view the experiments click on the *Experiments* tab in your project. Here you have one set of experiments that all the jobs were logged against. Click on the experiment name to see more details.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/7e0e2c95934cf3064cc3aa6e6e13d2e71331c614/readme_images/ExperimentsWindow.png>
+![24-ExperimentsWindow.png](readme_images/ExperimentsWindow.png)
 <!---
-![23](raw/latest/readme_images/ExperimentsWindow.png)
+![24](raw/latest/readme_images/ExperimentsWindow.png)
 -->
 
 Within the experiment we can see three different runs corresponding to the three different jobs we created. Our code tagged each with the framework that was used to create the model; H2o Automl, sklearn, and R in this case. We are also tracking the R^2 value and Mean Squared Error (MSE). Our visualisation currently shows only the R^2 value. Let's update it to show both R^2 and MSE so we can get a better view of our models.
 
 Click on the three dots and choose *Edit*.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/7e0e2c95934cf3064cc3aa6e6e13d2e71331c614/readme_images/MLflowEdit.png>
+![25-MLflowEdit.png](readme_images/MLflowEdit.png)
 <!---
-![24](raw/latest/readme_images/MLflowEdit.png)
+![25](raw/latest/readme_images/MLflowEdit.png)
 -->
 
 Now click on *Target (Metrics)* and select *MSE* to add it to our visualisation. Then click *Save*.
@@ -339,16 +339,16 @@ From our results, it looks like the sklearn model is the best candidate to deplo
 
 Click on the checkbox next to the runs you'd like to compare, then the _Compare_ button.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/1997b3c3176109102104da52da966c55d4ecbf69/readme_images/CompareJobRuns.png>
+![26-CompareJobRuns.png](readme_images/CompareJobRuns.png)
 <!---
-![25](raw/latest/readme_images/CompareJobRuns.png)
+![26](raw/latest/readme_images/CompareJobRuns.png)
 -->
 
 Here we can see a lot more detail about the different runs. Scroll down to see the parameters (we aren't tracking any this time), the metrics, graphics that are created in the experiments and even the Domino execution details. This gives us the ability to track and share all of the experiments we are doing for a particular initative to ensure we get the best results and have documentation on how we got there.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/bb2a3e3be44a0eb6270686653e9ee7e1179a277e/readme_images/compareruns.png> 
+![27-compareruns.png](readme_images/compareruns.png)
 <!---
-![26](raw/latest/readme_images/compareruns.png)
+![27](raw/latest/readme_images/compareruns.png)
 -->
 
 **You've successfully compared experiments and selected a model in Domino!**
@@ -385,9 +385,9 @@ Sample Scoring Request:
 }
 ```
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/b704a3ad17483eb20341f2800a284408584ec9d2/readme_images/NewEndpoint.png>
+![28-NewEndpoint.png](readme_images/NewEndpoint.png)
 <!---
-![27](raw/latest/readme_images/NewEndpoint.png)
+![28](raw/latest/readme_images/NewEndpoint.png)
 -->
 
 Click *Next*. In the field *The file containing the code to invoke (must be a Python or R file)* enter the following:
@@ -408,9 +408,9 @@ Check the box *Log HTTP requests and responses to model instance logs*.
     
 Click *Create Endpoint*.
     
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/b704a3ad17483eb20341f2800a284408584ec9d2/readme_images/EndpointSetup.png>     
+![29-EndpointSetup.png](readme_images/EndpointSetup.png)
 <!---
-![27](raw/latest/readme_images/EndpointSetup.png)
+![29](raw/latest/readme_images/EndpointSetup.png)
 -->
   
 Over the next 2-5 minutes, you'll see the status of your endpoint go from Preparing to Build -> Building -> Starting -> Running   
@@ -624,16 +624,16 @@ shinyApp(ui = ui, server = server)
 
 **Go to line 63** note that this is missing input for your model api endpoint. In a new tab navigate to your model API you just deployed. Go into overview and select the R tab as shown below. Copy lines 4-7 from the R code snippet. Switch back to your new file tab and paste the new lines in line 64 in your file.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/0f76874dedb3670ef304bfbf655c9d10c6027e6d/readme_images/CopyRCode.png>
+![30-CopyRCode.png](readme_images/CopyRCode.png)
 <!---
-![28](raw/latest/readme_images/CopyRCode.png)
+![30](raw/latest/readme_images/CopyRCode.png)
 -->
 
 Lines 61-79 in your file should look like the following (note the url and authenticate values will be different) 
                    
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/0f76874dedb3670ef304bfbf655c9d10c6027e6d/readme_images/EditAppFile.png > 
+![31-EditAppFile.png](readme_images/EditAppFile.png)
 <!---
-![29](raw/latest/readme_images/EditAppFile.png)
+![31](raw/latest/readme_images/EditAppFile.png)
 -->
 
 Click *Save*.
@@ -646,16 +646,16 @@ Click *Publish*.
                    
 You'll now see the below screen, once your app is active (should be within ~1-3 minutes) you can click the View App button. 
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/0f76874dedb3670ef304bfbf655c9d10c6027e6d/readme_images/ViewAppButton.png > 
+![32-ViewAppButton.png](readme_images/ViewAppButton.png)
 <!---
-![30](raw/latest/readme_images/ViewAppButton.png)
+![32](raw/latest/readme_images/ViewAppButton.png)
 --> 
 
 Once you're in the app you can try out sending different scoring requests to your model using the form on the right side of your page. Click *Predict* to send a scoring request and view the results in the visualization on the left side.
                    
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/main/readme_images/AppView.png >  
+![33-ViewAppButton.png](readme_images/AppView.png)
 <!---
-![31](raw/latest/readme_images/AppView.png)
+![33](raw/latest/readme_images/AppView.png)
 -->
 
 **You've Now Created a Shiny App!**
@@ -669,9 +669,9 @@ In your App, navigate to the *Permissions* tab.
 
 In the Permissions tab, update the permissions to allow *Anyone, including anonymous users*.
 
-<img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/0f76874dedb3670ef304bfbf655c9d10c6027e6d/readme_images/PermissionsUpdate.png>  
+![34-ViewAppButton.png](readme_images/PermissionsUpdate.png)
 <!---
-![32](raw/latest/readme_images/PermissionsUpdate.png)
+![34](raw/latest/readme_images/PermissionsUpdate.png)
 -->
 
 Navigate back to the *Settings* tab and click *Copy App Link*
