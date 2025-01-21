@@ -21,6 +21,8 @@ Once you have access to the Domino training environment, guide your mouse to the
 <img src = https://github.com/dominodatalab/domino-training-wine-quality/blob/03934da81f89ef439fd5fd0eec35222fe30535da/readme_images/NewUISearch.png>
 
 [//]: # Commented out picture for within Domino project. Remove [//]: # to add picture.
+
+
 [//]: # ![1](raw/latest/readme_images/NewUISearch.png)
 
 
