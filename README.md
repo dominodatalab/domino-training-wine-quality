@@ -23,6 +23,7 @@ Once you have access to the Domino training environment, guide your mouse to the
 [//]: # Commented out picture for within Domino project. Remove [//]: # to add picture.
 [//]: # ![1](raw/latest/readme_images/NewUISearch.png)
 
+
 Select the project called *WineQualityProject*.
 
 Read the readme to learn more about the project's use case, status, etc.
