@@ -16,7 +16,11 @@
 ### Lab 1.1 - Forking Existing Projects
 ***Documentation: [Fork Projects](https://docs.dominodatalab.com/en/latest/user_guide/ef261b/fork-projects/)***
 
-Once you have access to the Domino training environment, guide your mouse to the top Search menu. In the cell provided, begin typing *WineQualityProject*. You'll see any relevant projects, data sources, environments, etc., appear in the drop-down menu.
+Once you have access to the Domino training environment, guide your mouse to the top **Search** menu. In the cell provided, begin typing *WineQualityProject*. 
+
+You'll see any relevant projects, data sources, environments, etc., appear in the drop-down menu.
+
+[make sure to remove or blur any employee names that show up in the screenshots]: #
 
 ![1-NewUISearch](readme_images/NewUISearch.png)
 
@@ -24,11 +28,10 @@ Once you have access to the Domino training environment, guide your mouse to the
 ![1](raw/latest/readme_images/NewUISearch.png)
 -->
 
-Select the project called *WineQualityProject*.
-
-Read the readme to learn more about the project's use case, status, etc.
-
-In the top right corner, choose the icon to *fork* the project. Name the project *Domino-Training-YourName*
+1. Select the project called *WineQualityProject*.
+2. Read the readme to learn more about the project's use case, status, etc.
+3. In the top right corner, choose the icon to *fork* the project.
+4. Name the project *Domino-Training-YourName*.
 
 ![2-SearchIndex](readme_images/SearchIndex.png)
 <!---
@@ -40,18 +43,20 @@ In the top right corner, choose the icon to *fork* the project. Name the project
 ### Lab 1.2 - Update Project Settings
 ***Documentation: [Project Settings](https://docs.dominodatalab.com/en/latest/user_guide/dba65c/set-project-settings/)***
 
-In your new project, click on Settings in the bottom left. This will take you to your project settings.
+1. In your new project, click on **Settings** in the bottom left. This will take you to your project settings.
+2. View the default hardware tier and compute environment - make sure they are set to *Small* and *WineQualityProject* respectively:
 
-View the default hardware tier and compute environment - ensure they are set to *Small* and *WineQualityProject* respectively:
+[I would consider omitting the bottom half of this graphic - it's really big! A neat thing to try would be to embed a small icon right after the word Settings in step 1]: #
 
 ![3-NewUIProjectSettings](readme_images/NewUIProjectSettings.png)
 <!---
 ![3](raw/latest/readme_images/NewUIProjectSettings.png)
 -->
 
-Go to the Access and Sharing tab - change your project visibility to *Private*. 
+3. Go to the **Access and Sharing** tab - change your project visibility to *Private*.
+4. Add your instructor or another attendee as a collaborator in your project. 
 
-Add your instructor or another attendee as a collaborator in your project. 
+[This screenshot is enormous! Try chopping it in half - the top half can go under step 3, bottom half under step 4. It also helps to put a bit of empty space between the previous step's screenshot and the next step's text]: #
 
 ![4-NewUIAccessSharing](readme_images/NewUIAccessSharing.png)
 <!---
@@ -63,13 +68,14 @@ Add your instructor or another attendee as a collaborator in your project.
 ### Lab 1.3 - Defining Project Tasks
 ***Documentation: [Add Project tasks](https://docs.dominodatalab.com/en/latest/user_guide/4e60ef/add-project-tasks/)***
 
-[//]: # In the left pane of your Project, navigate to *Govern* > *Tasks*. 
+[I reversed the order of these two options. Reason: newest way should be listed first! Older methods, last]: # 
 
-In the left pane of your Project, navigate to *Overview* > *Tasks*. Depending on your version of Domino, you may also find this by navigating to *Govern* > *Tasks*. 
-
-In the top right of the Tasks window, click *Add Task*.
-
-Enter *Explore Data* for the task name. Update the stage to *Data Acquisition and Exploration*. Assign yourself or one of your project collaborators as an owner of the task. Click *Save*. 
+1. In the left pane of your Project, navigate to *Govern* > *Tasks*. Depending on your version of Domino, you may also find this by navigating to *Overview* > *Tasks*.
+2. In the top right of the Tasks window, click *Add Task*.
+3. Enter *Explore Data* for the task name.
+4. Update the stage to *Data Acquisition and Exploration*.
+5. Assign yourself or one of your project collaborators as an owner of the task.
+6. Click *Save*. 
 
 ![5-ProjectTask](readme_images/ProjectTask.png)
 <!---
@@ -84,44 +90,54 @@ Enter *Explore Data* for the task name. Update the stage to *Data Acquisition an
 ### Lab 2.1 - Add a Data Source
 ***Documentation: [Add a Data Source to a Project](https://docs.dominodatalab.com/en/latest/user_guide/fa5f3a/use-data-sources/#add_an_existing_data_source_to_a_project)***
 
-We will now add a data connection defined by the admin of our project to later query in data. Navigate to *Data > Data Sources* in the left pane of your project. Click _Add a Data Source_.
+We will now add a data connection defined by the admin of our project to later query in data. 
+
+1. Navigate to *Data > Data Sources* in the left pane of your project.
+2. Click _Add a Data Source_.
 
 ![6-AddDataSourcce](readme_images/AddDataSourcce.png)
 <!---
 ![6](raw/latest/readme_images/AddDataSourcce.png)
 -->
 
-Search for *WineQualityWorkshop*. You will see an Amazon S3 data store was created by your admin. Select the data source and choose *Add to Project*.  
+3. Search for *WineQualityWorkshop*. You will see an Amazon S3 data store was created by your admin.
+4. Select the data source and choose *Add to Project*.  
 
 ![7-AddS3toProject](readme_images/AddS3toProject.png)
 <!---
 ![7](raw/latest/readme_images/AddS3toProject.png)
 -->
 
+[is there a way to format the "Yay! You did it!" stuff so that it stands out more? this gets a little lost between the screenshot and the next section]: #
+
 **You've now added data to your Project!**
 
 ### Lab 2.2 - Launch a Workspace
 ***Documentation: [Launch a Workspace](https://docs.dominodatalab.com/en/latest/user_guide/e6e601/launch-a-workspace/)***
 
-In your Project, click into the *Workspaces* tab on the left. In the top right of the *Workspaces* page, click *Create New Workspace*.
+1. In your Project, click into the *Workspaces* tab on the left.
+2. In the top right of the *Workspaces* page, click *Create New Workspace*.
+
+[consider chopping the bottom half of this graphic off. Keep the relevant bits]: #
 
 ![8-CreateWorkspace](readme_images/CreateWorkspace.png)
 <!---
 ![8](raw/latest/readme_images/CreateWorkspace.png)
 -->
 
-A *Launch New Workspace* window appears. You'll see that the Workspace Environment already defaults to *WineQualityProject* because of the Project Settings you set in step 1.2. You always have the option to manually change the Environment for an individual workspace, which you can do here. Let's leave it as is for now.
+A *Launch New Workspace* window appears. You'll see that the **Workspace Environment** already defaults to *WineQualityProject* because of the **Project Settings** you set in Lab 1.2. You always have the option to manually change the **Environment** for an individual workspace, which you can do here. Let's leave it as is for now.
 
-Select *JupyterLab* as the *Workspace IDE*.
+3. Select *JupyterLab* as the *Workspace IDE*.
 
 ![9-Workspace](readme_images/Workspace.png)
 <!---
 ![9](raw/latest/readme_images/Workspace.png)
 -->
 
-Next, navigate to *Data Plane & Hardware*. Again, you'll see Small is the default Hardware tier because of what we set in our Project Settings. We'll keep it as Small for this Workspace. 
+4. Next, navigate to *Data Plane & Hardware*.
+Again, you'll see Small is the default Hardware tier because of what we set in our Project Settings. We'll keep it as Small for this Workspace. 
 
-Click *Launch* now.
+5. Click *Launch* now.
 
 ![10-WorkspaceHWT](readme_images/WorkspaceHWT.png)
 <!---
