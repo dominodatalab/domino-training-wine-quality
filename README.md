@@ -30,7 +30,7 @@ You'll see any relevant projects, data sources, environments, etc., appear in th
 
 1. Select the project called *WineQualityProject*.
 2. Read the `readme` to learn more about the project's use case, status, etc.
-3. In the top right corner, choose the icon to *fork* the project.
+3. In the top right corner, choose the icon to fork the project.
 4. Name the project *Domino-Training-YourName*.
 
 ![2-SearchIndex](readme_images/SearchIndex.png)
@@ -220,7 +220,7 @@ df.to_csv(path, index = False)
 ![13](raw/latest/readme_images/Histogram.png)
 -->
 
-7. Rename your notebook 'EDA_code.ipynb' by right-clicking on the file name as shown below.
+7. Rename your notebook `EDA_code.ipynb` by right-clicking on the file name as shown below.
 8. Click the *Save* icon.
 
 ![14-Rename](readme_images/Rename.png)
@@ -242,7 +242,7 @@ Now that we've finished working on our notebook and written data back to our pro
 ![15](raw/latest/readme_images/SyncNB.png)
 -->
 
-3. Enter an informative but brief commit message such as "Sync EDA notebook to project".
+3. Enter an informative but brief commit message such as: Sync EDA notebook to project.
 4. Click *Sync All Changes*.
 5. Click *Stop* at the top of your Workspace to stop the instance.
 
@@ -251,10 +251,10 @@ Now that we've finished working on our notebook and written data back to our pro
 ### Lab 2.5 - Complete Project Tasks
 ***Documentation: [Link files to Tasks](https://docs.dominodatalab.com/en/latest/user_guide/4e60ef/add-project-tasks/#tr3)***
 
-Delete your stopped Workspace by clicking the trashcan icon in the Workspaces page.
+Delete your stopped Workspace by clicking the trashcan icon in the *Workspaces* page.
 
 1. In your Project, navigate to *Code*.
-You'll see that the latest commit will reflect the commit message you just logged, and you can see 'EDA_code.ipynb' in your file directory.
+You'll see that the latest commit will reflect the commit message you just logged, and you can see `EDA_code.ipynb` in your file directory.
 
 ![16-ViewCode](readme_images/ViewCode.png)
 <!---
@@ -292,7 +292,7 @@ We are taking a three-pronged approach and building a model in sklearn (python),
 If you'd like to see the details of what we'll run:
 
 1. Navigate to *Code*.
-2. In your file browser, go into the scripts folder and inspect *multitrain.py*.
+2. In your file browser, go into the scripts folder and inspect `multitrain.py`.
 3. Check out the code in the script and comments describing the purpose of each line of code.
 
 ![19-multitrainpy.png](readme_images/multitrainpy.png)
@@ -376,7 +376,7 @@ Within the experiment we can see three different runs corresponding to the three
 
 From our results, it looks like the `sklearn` model is the best candidate to deploy, and our `R` model is failing. Let's compare the runs in more detail.
 
-4. Click on the checkbox next to the runs you'd like to compare, then the _Compare_ button.
+4. Click on the checkbox next to the runs you'd like to compare, then the *Compare* button.
 
 ![26-CompareJobRuns.png](readme_images/CompareJobRuns.png)
 <!---
