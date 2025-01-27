@@ -29,7 +29,7 @@ You'll see any relevant projects, data sources, environments, etc., appear in th
 -->
 
 1. Select the project called *WineQualityProject*.
-2. Read the readme to learn more about the project's use case, status, etc.
+2. Read the `readme` to learn more about the project's use case, status, etc.
 3. In the top right corner, choose the icon to *fork* the project.
 4. Name the project *Domino-Training-YourName*.
 
@@ -43,7 +43,7 @@ You'll see any relevant projects, data sources, environments, etc., appear in th
 ### Lab 1.2 - Update Project Settings
 ***Documentation: [Project Settings](https://docs.dominodatalab.com/en/latest/user_guide/dba65c/set-project-settings/)***
 
-1. In your new project, click on **Settings** in the bottom left. This will take you to your project settings.
+1. In your new project, click on *Settings* in the bottom left. This will take you to your project settings.
 2. View the default hardware tier and compute environment - make sure they are set to *Small* and *WineQualityProject* respectively:
 
 [I would consider omitting the bottom half of this graphic - it's really big! A neat thing to try would be to embed a small icon right after the word Settings in step 1]: #
@@ -53,7 +53,7 @@ You'll see any relevant projects, data sources, environments, etc., appear in th
 ![3](raw/latest/readme_images/NewUIProjectSettings.png)
 -->
 
-3. Go to the **Access and Sharing** tab - change your project visibility to *Private*.
+3. Go to the *Access and Sharing* tab - change your project visibility to *Private*.
 4. Add your instructor or another attendee as a collaborator in your project. 
 
 [This screenshot is enormous! Try chopping it in half - the top half can go under step 3, bottom half under step 4. It also helps to put a bit of empty space between the previous step's screenshot and the next step's text]: #
@@ -71,7 +71,7 @@ You'll see any relevant projects, data sources, environments, etc., appear in th
 [I reversed the order of these two options. Reason: newest way should be listed first! Older methods, last]: # 
 
 1. In the left pane of your Project, navigate to *Govern* > *Tasks*. Depending on your version of Domino, you may also find this by navigating to *Overview* > *Tasks*.
-2. In the top right of the Tasks window, click *Add Task*.
+2. In the top right of the *Tasks* window, click *Add Task*.
 3. Enter *Explore Data* for the task name.
 4. Update the stage to *Data Acquisition and Exploration*.
 5. Assign yourself or one of your project collaborators as an owner of the task.
@@ -125,7 +125,7 @@ We will now add a data connection defined by the admin of our project to later q
 ![8](raw/latest/readme_images/CreateWorkspace.png)
 -->
 
-The *Launch New Workspace* window appears. You'll see that the **Workspace Environment** already defaults to *WineQualityProject* because of the **Project Settings** you set in Lab 1.2. You always have the option to manually change the **Environment** for an individual workspace, which you can do here. Let's leave it as is for now.
+The *Launch New Workspace* window appears. You'll see that the *Workspace Environment* already defaults to *WineQualityProject* because of the *Project Settings* you set in Lab 1.2. You always have the option to manually change the *Environment* for an individual workspace, which you can do here. Let's leave it as is for now.
 
 3. Select *JupyterLab* as the *Workspace IDE*.
 
@@ -135,7 +135,7 @@ The *Launch New Workspace* window appears. You'll see that the **Workspace Envir
 -->
 
 4. Next, navigate to *Data Plane & Hardware*.
-Again, you'll see Small is the default Hardware tier because of what we set in our Project Settings. We'll keep it as Small for this Workspace. 
+Again, you'll see *Small* is the default hardware tier because of what we set in our *Project Settings*. We'll keep it as *Small* for this Workspace. 
 
 5. Click *Launch* now.
 
@@ -163,7 +163,7 @@ In your Workspace, create a new Python notebook by clicking the *Python* icon un
 ![12](raw/latest/readme_images/pythonData.png)
 -->
 
-3. After running the code snippet. Copy the code below into the following cell: 
+3. After running the code snippet, copy the code below into the following cell: 
 
 ```python
 from io import StringIO
@@ -221,7 +221,7 @@ df.to_csv(path, index = False)
 -->
 
 7. Rename your notebook 'EDA_code.ipynb' by right-clicking on the file name as shown below.
-8. Click the **Save** icon.
+8. Click the *Save* icon.
 
 ![14-Rename](readme_images/Rename.png)
 <!---
@@ -243,8 +243,8 @@ Now that we've finished working on our notebook and written data back to our pro
 -->
 
 3. Enter an informative but brief commit message such as "Sync EDA notebook to project".
-4. Click **Sync All Changes**.
-5. Click **Stop** at the top of your Workspace to stop the instance.
+4. Click *Sync All Changes*.
+5. Click *Stop* at the top of your Workspace to stop the instance.
 
 **You've now successfully synced changes!**
 
@@ -323,7 +323,7 @@ scripts/multitrain.py
 -->
 
 4. Watch as three job runs appear, you may see them in starting, running, or completed state.
-5. Click into the sklearn_model_train.py job run.
+5. Click into the `sklearn_model_train.py` job run.
 
 ![22-JobStatus.png](readme_images/JobStatus.png)
 <!---
@@ -332,7 +332,7 @@ scripts/multitrain.py
 
 #### Step 3: View versions and Job history
 
-In the *Details* tab of the Job run, you can see what versions of the code, software, and hardware were executed, along with details about who ran the Job and when. 
+In the *Details* tab of the Job run, you can see what versions of the code, software, and hardware were executed, along with details about who ran the job and when. 
 
 1. Click on the *Results* tab of the job.
 2. Scroll down to view the visualizations and other outputs of the job.
@@ -374,7 +374,7 @@ Within the experiment we can see three different runs corresponding to the three
 2. Now click on *Target (Metrics)* and select *MSE* to add it to our visualisation.
 3. Click *Save*.
 
-From our results, it looks like the sklearn model is the best candidate to deploy, and our R model is failing. Let's compare the runs in more detail.
+From our results, it looks like the `sklearn` model is the best candidate to deploy, and our `R` model is failing. Let's compare the runs in more detail.
 
 4. Click on the checkbox next to the runs you'd like to compare, then the _Compare_ button.
 
@@ -457,17 +457,17 @@ predict
 ![29](raw/latest/readme_images/EndpointSetup.png)
 -->
   
-Over the next 2-5 minutes, you'll see the status of your endpoint go from Preparing to Build -> Building -> Starting -> Running   
+Over the next 2-5 minutes, you'll see the status of your endpoint go from *Preparing to Build* > *Building* > *Starting* > *Running*.   
 
 **You've now created a Domino Endpoint!**
 
 ### Lab 3.2 - Test your Endpoint
 ***Documentation: [Request Predictions](https://docs.dominodatalab.com/en/latest/user_guide/8dbc91/deploy-domino-endpoints/#Request-a-prediction)***
     
-Once your endpoint reaches the Running state, a pod containing your object and code for inference is up and ready to accept REST API calls.
+Once your endpoint reaches the *Running* state, a pod containing your object and code for inference is up and ready to accept REST API calls.
 
-1. To test your endpoint, navigate to the Overview tab. 
-2. In the request field in the Tester tab enter a scoring request in JSON form. 
+1. To test your endpoint, navigate to the *Overview* tab. 
+2. In the request field in the *Tester* tab enter a scoring request in JSON form. 
 You can copy the sample request that you defined in your description field.
 
 ``` 
@@ -482,9 +482,9 @@ You can copy the sample request that you defined in your description field.
 }
 ```
     
-In the response box you will see a *prediction* value representing your endpoint's predicted quality for a bottle of wine with the attributes defined in the Request box. 
+In the response box you will see a *prediction* value representing your endpoint's predicted quality for a bottle of wine with the attributes defined in the *Request* box. 
 
-Try changing 'is_red' from 0 to 1 and 'alcohol' from 11 to 5 to see how the predicted quality differs. Feel free to play around with different values in the Request box.
+Try changing `is_red` from 0 to 1 and `alcohol` from 11 to 5 to see how the predicted quality differs. Feel free to play around with different values in the *Request* box.
 
 ``` 
 {
@@ -512,7 +512,7 @@ Now that we have a pod running to serve new model requests - we will build out a
 #### Step One: Build an app
 
 1. In your Project, navigate to *Code*. 
-2. If you have an ```app.sh``` file, open it now and verify it matches the below. 
+2. If you have an `app.sh` file, open it now and verify it matches the below. 
 3. If not, click on *New File* and paste the below code into the file. It's a bash script that will start and run the Shiny App server based on the inputs provided. 
 4. Click *Save*.
 
@@ -540,7 +540,7 @@ R -e 'shiny::runApp("./shiny_app.R", port=8888, host="0.0.0.0")'
 ```
 
 5. Navigate back into the *Code* tab.
-6. Click add a new file and name it `shiny_app.R` (make sure the file name is exactly that, it is case sensitive).
+6. Click add a new file and name it `shiny_app.R`. Make sure the file name is exactly that, it is case sensitive.
 7. Paste the following into the file:
 
 ```R
@@ -679,7 +679,7 @@ shinyApp(ui = ui, server = server)
 
 #### Step Two: Add missing input
 
-1. **Go to line 63** note that this is missing input for your model api endpoint. 
+1. *Go to line 63* note that this is missing input for your model api endpoint. 
 2. In a new tab, navigate to your model API you just deployed. 
 3. Go into overview and select the R tab as shown below. 
 4. Copy lines 4-7 from the R code snippet. 
@@ -732,7 +732,7 @@ Once you're in the app you can try out sending different scoring requests to you
 Congratulations! You have now gone through a full workflow to pull data from an S3 bucket, clean and visualize the data, train several models across different frameworks, deploy the best performing model, and use a web app front end for easy scoring of your model. Now the final step is to get your model and front end into the hands of the end users.
 
 1. In your App, navigate to the *Permissions* tab.
-2. In the Permissions tab, update the permissions to allow *Anyone, including anonymous users*.
+2. In the *Permissions* tab, update the permissions to allow *Anyone, including anonymous users*.
 
 ![34-ViewAppButton.png](readme_images/PermissionsUpdate.png)
 <!---
